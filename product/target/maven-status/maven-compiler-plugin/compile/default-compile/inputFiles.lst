@@ -1,0 +1,12 @@
+C:\Users\Itach\Documents\Studies\Project\Producto\product\src\main\java\com\example\product\dto\ProductJsonApiResponse.java
+C:\Users\Itach\Documents\Studies\Project\Producto\product\src\main\java\com\example\product\error\ProductNotFoundException.java
+C:\Users\Itach\Documents\Studies\Project\Producto\product\src\main\java\com\example\product\ProductApplication.java
+C:\Users\Itach\Documents\Studies\Project\Producto\product\src\main\java\com\example\product\model\Product.java
+C:\Users\Itach\Documents\Studies\Project\Producto\product\src\main\java\com\example\product\dto\ProductJsonApiListResponse.java
+C:\Users\Itach\Documents\Studies\Project\Producto\product\src\main\java\com\example\product\error\JsonApiError.java
+C:\Users\Itach\Documents\Studies\Project\Producto\product\src\main\java\com\example\product\security\InternalApiKeyFilter.java
+C:\Users\Itach\Documents\Studies\Project\Producto\product\src\main\java\com\example\product\repository\ProductRepository.java
+C:\Users\Itach\Documents\Studies\Project\Producto\product\src\main\java\com\example\product\controller\ProductController.java
+C:\Users\Itach\Documents\Studies\Project\Producto\product\src\main\java\com\example\product\error\JsonApiErrorResponse.java
+C:\Users\Itach\Documents\Studies\Project\Producto\product\src\main\java\com\example\product\service\ProductService.java
+C:\Users\Itach\Documents\Studies\Project\Producto\product\src\main\java\com\example\product\error\GlobalExceptionHandler.java

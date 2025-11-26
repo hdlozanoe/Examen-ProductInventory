@@ -1,0 +1,49 @@
+# Archivos compilados de Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Directorios de compilación
+/target/
+/out/
+
+# Archivos de configuración locales
+*.iml
+*.ipr
+*.iws
+/.idea/
+/*.log
+
+# Dependencias descargadas
+/.mvn/
+/.mvn/wrapper/maven-wrapper.jar
+
+# Configuración de Spring Boot
+application.properties
+application.yml
+*.keystore
+
+# Docker
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+/.classpath
+/.project
+/.settings/
+
+# NetBeans
+/nbproject/private/
+
+# Maven
+/logs/
+!pom.xml
