@@ -72,6 +72,12 @@ Definidas en `docker-compose.yml`:
 | GET    | `/inventory/{productId}`                | Obtener inventario de producto     |
 | PUT    | `/inventory/{productId}/decrease/{amount}` | Disminuir inventario de producto |
 
+### 📊 Diagrama del proyecto
+
+A continuación se muestra un diagrama del proyecto:
+
+<img width="50%" alt="image" src="https://github.com/user-attachments/assets/af51f76d-b262-4cd7-ad60-34a8be580c3e" />
+
 ## 🧪 Pruebas Unitarias e Integración
 
 ### Ejecutar pruebas
