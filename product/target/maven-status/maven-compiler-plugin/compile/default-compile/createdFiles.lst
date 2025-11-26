@@ -1,0 +1,14 @@
+com\example\product\dto\ProductJsonApiResponse$Data.class
+com\example\product\repository\ProductRepository.class
+com\example\product\service\ProductService.class
+com\example\product\dto\ProductJsonApiListResponse.class
+com\example\product\error\GlobalExceptionHandler.class
+com\example\product\dto\ProductJsonApiResponse$Attributes.class
+com\example\product\model\Product.class
+com\example\product\dto\ProductJsonApiResponse.class
+com\example\product\security\InternalApiKeyFilter.class
+com\example\product\ProductApplication.class
+com\example\product\error\JsonApiError.class
+com\example\product\error\ProductNotFoundException.class
+com\example\product\error\JsonApiErrorResponse.class
+com\example\product\controller\ProductController.class

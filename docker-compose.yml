@@ -1,0 +1,64 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: product-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: productdb
+    ports:
+      - "5433:5432"  # puerto para el host
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - micro_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  product-service:
+    build: ./product
+    container_name: product-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/productdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+
+      # API KEY para validar requests entrantes de otros microservicios
+      INTERNAL_API_KEY: PRODUCT_123_SECURE_KEY
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - micro_net
+    restart: on-failure
+
+  inventory-service:
+    build: ./inventory
+    container_name: inventory-service
+    environment:
+      # URL interna para llamar al microservicio product
+      PRODUCT_SERVICE_URL: http://product-service:8080/products  
+
+      # API KEY que inventory enviará al microservicio product
+      INTERNAL_API_KEY: PRODUCT_123_SECURE_KEY
+    ports:
+      - "8081:8080"
+    depends_on:
+      product-service:
+        condition: service_started
+    networks:
+      - micro_net
+    restart: on-failure
+
+networks:
+  micro_net:
+
+volumes:
+  postgres_data:
