@@ -26,8 +26,8 @@ El objetivo es garantizar una arquitectura modular, escalable y fácilmente mant
 
 ### Clonar proyecto
 ```bash
-git clone <repositorio-url>
-cd <proyecto-raiz>
+git clone https://github.com/hdlozanoe/Examen-ProductInventory.git
+cd Examen-ProductInventory
 ```
 #### Construcción con Docker Compose
 
@@ -106,6 +106,7 @@ mvn clean test
 ```http
 POST http://localhost:8080/products
 Content-Type: application/json
+X-INTERNAL-API-KEY: PRODUCT_123_SECURE_KEY
 ```
 **Body**
 ```json
@@ -124,6 +125,7 @@ Content-Type: application/json
 ```http
 POST http://localhost:8081/inventory
 Content-Type: application/json
+X-INTERNAL-API-KEY: PRODUCT_123_SECURE_KEY
 ```
 **Body**
 ```json
@@ -147,6 +149,7 @@ Disminuye la cantidad disponible de un producto en inventario.
 - **Ejemplo de request**
 ```bash
 PUT http://localhost:8081/inventory/1/decrease/3
+X-INTERNAL-API-KEY: PRODUCT_123_SECURE_KEY
 ```
 **Respuesta exitosa**
 ```json
@@ -173,6 +176,7 @@ Obtiene la información de inventario de un producto específico.
 - **Ejemplo de request**
 ```bash
 GET http://localhost:8081/inventory/1
+X-INTERNAL-API-KEY: PRODUCT_123_SECURE_KEY
 ```
 - **Path Parameters**
   - `productId` → ID del producto a consultar
