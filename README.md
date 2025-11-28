@@ -76,7 +76,8 @@ Definidas en `docker-compose.yml`:
 
 A continuación se muestra un diagrama del proyecto:
 
-<img width="50%" alt="image" src="https://github.com/user-attachments/assets/af51f76d-b262-4cd7-ad60-34a8be580c3e" />
+<img width="50%" alt="image" src="https://github.com/user-attachments/assets/411a0a85-fd94-4652-9043-94d1e8297991" />
+
 
 ## 🧪 Pruebas Unitarias e Integración
 
